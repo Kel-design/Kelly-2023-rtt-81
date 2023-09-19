@@ -4,6 +4,8 @@ public class EscapeCharacters {
 	
 	public static void main(String[] args) {
 		
+		//Info about Escape Sequences on slide 28 Lesson 303.2
+		
 		System.out.println("This is a tab character ->\t<-");
 		
 		System.out.println("This is line 1\nThis is line 2");
