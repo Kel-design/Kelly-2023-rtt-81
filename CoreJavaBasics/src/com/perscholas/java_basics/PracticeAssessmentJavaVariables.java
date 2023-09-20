@@ -1,5 +1,7 @@
 package com.perscholas.java_basics;
 
+import java.text.DecimalFormat;
+
 public class PracticeAssessmentJavaVariables {
 
 	public static void main(String[] args) {
@@ -58,13 +60,21 @@ public class PracticeAssessmentJavaVariables {
 		int area = LENGTH * height;
 		System.out.println("The area is " + area);
 		
-		double coffee = 1.50;
-		double espresso = 3.25;
-		double muffin = 2.30;
-		double subtotal = (3 * coffee) + (4 * espresso) + (2 * muffin);
-		final double SALES_TAX = 0.8;
-		double totalSale = subtotal * SALES_TAX;
-		System.out.printf("The totalSale is $ %.2f", totalSale);
+		double coffee = 1.50d;
+		double espresso = 3.25d;
+		double muffin = 2.30d;
+		double subTotal = (3 * coffee) + (4 * espresso) + (2 * muffin);
+		
+		DecimalFormat df = new DecimalFormat ("$#,###.00");
+		System.out.println("Subtotal  :" + df.format(subTotal));
+		
+		double salesTax = subTotal * 0.10;
+		System.out.println("Sales Tax :" + df.format(salesTax));
+		
+		
+		double totalSale = subTotal * salesTax;
+		System.out.println("Total     : "+ df.format(totalSale));
+		
 		
 		
 		
