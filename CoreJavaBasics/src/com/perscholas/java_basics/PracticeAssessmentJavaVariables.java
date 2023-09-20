@@ -35,8 +35,7 @@ public class PracticeAssessmentJavaVariables {
 		double f = 75.2;
 		g = 25;
 		double h = f / g;
-		System.out
-				.println("The division answer is " + h + " One variable and the sum needed to be turned into doubles");
+		System.out.println((int) h);
 
 		double j = 100.64;
 		double k = 20.22;
