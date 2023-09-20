@@ -41,7 +41,6 @@ public class CoffeeShop {
 		parfait.setName("Parfait");
 		parfait.setPrice(4.59);
 		products.add(parfait);
-
 	}
 
 	public void printProduct(Product product) {
@@ -52,6 +51,15 @@ public class CoffeeShop {
 
 	public void printAllProducts() {
 		for (Product product : products) {
+			printProduct(product);
+		}
+	}
+	
+	public void printOrder (Product order)  {
+		System.out.println(order);
+	}
+	public void printOrder() {
+		for (Product product : order) {
 			printProduct(product);
 		}
 	}
@@ -109,6 +117,7 @@ public class CoffeeShop {
 			} else if (userSelection == 2) {
 				cf.userSelectProduct();
 			} else if (userSelection == 3) {
+				cf.printOrder();
 				// TODO display the products in the order list (use the order array)
 			} else if (userSelection == 5) {
 				System.exit(0);
