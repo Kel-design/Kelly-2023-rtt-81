@@ -8,11 +8,13 @@ public class PracticeAssignmentOperatorsAndNumbers {
 		
 
 		int x = 2;
-		x <<= 1;
-		System.out.println(Integer.toBinaryString(x));
-		System.out.printf("%.2f", value);
 		
-		// NEED HELP PRINTING FROM INTEGER TO TWO DECIMALS
+		System.out.println(Integer.toBinaryString(x));
+		x = x<< 1;
+		System.out.println(x);
+		
+		
+	
 		
 		
 		
