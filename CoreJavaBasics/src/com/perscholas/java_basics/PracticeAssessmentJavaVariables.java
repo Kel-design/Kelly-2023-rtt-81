@@ -41,7 +41,7 @@ public class PracticeAssessmentJavaVariables {
 		double j = 100.64;
 		double k = 20.22;
 		double m = j / k;
-		System.out.println("The division answer is " + m);
+		System.out.printf("The division answer is %.2f\n", m);
 
 		double p = 100.64;
 		double q = 20.22;
@@ -51,9 +51,8 @@ public class PracticeAssessmentJavaVariables {
 		int xx = 5;
 		int yy = 6;
 		int qq = yy / xx;
-		System.out.println("The division answer is " + qq);
-
-		// NEED HELP WITH CASTING yy TO A DOUBLE
+		System.out.printf("The division answer is %.2f",(double) qq);
+		
 
 		final int LENGTH = 10;
 		int height = 20;
@@ -66,9 +65,9 @@ public class PracticeAssessmentJavaVariables {
 		double subtotal = (3 * coffee) + (4 * espresso) + (2 * muffin);
 		final double SALES_TAX = 0.8;
 		double totalSale = subtotal * SALES_TAX;
-		System.out.println("The totalSale is $" + totalSale);
+		System.out.printf("The totalSale is $ %.2f", totalSale);
 		
-		// NEED HELP WITH TWO DECIMAL PLACE FORMAT
+		
 		
 		
 				
