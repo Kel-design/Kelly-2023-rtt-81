@@ -13,7 +13,7 @@ public class CoffeeShop {
 	// this is a list of items in your order
 	List<Product> order = new ArrayList<>();
 
-	// this in a scanner input
+	// this is a scanner input
 	Scanner input = new Scanner(System.in);
 
 	public void setupProducts() {
