@@ -1,4 +1,4 @@
-package com.perscholas.java_basics;
+package javastrings;
 
 public class JavaStringsIndexOfMethod {
 
