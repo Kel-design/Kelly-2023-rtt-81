@@ -1,4 +1,4 @@
-package javastrings;
+package stringsmethods;
 
 public class JavaStringsIsEmptyMethod {
 

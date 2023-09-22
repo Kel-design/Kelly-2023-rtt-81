@@ -9,7 +9,7 @@ public class PAControlFlow6 {
 		System.out.print("Please enter a number between 1 and 7:  ");
 		int score = sc.nextInt();
 
-		switch (int score) {
+		switch (score) {
 
 		case 1:
 			System.out.println("Monday");
@@ -32,8 +32,8 @@ public class PAControlFlow6 {
 		case 7:
 			System.out.println("Sunday");
 			break;
-		default: 
-			System.out.println.("Out of range");
+		default:
+			System.out.println("Out of range");
 		}
 
 	}
