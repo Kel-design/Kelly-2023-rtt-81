@@ -57,7 +57,7 @@ public class ArrayExample {
 		System.out.println("Position of the first null is " + firstNull);
 
 		// write a for loop that tells me how many values are not null
-		int nullNotCount = 0;
+		int nullNotCount = 0;// starts with a position of assumption...this case we assume 0
 		for (String value : stringArray) {
 			if (value != null) {
 				nullNotCount = nullNotCount + 1;
@@ -67,19 +67,43 @@ public class ArrayExample {
 		System.out.println("The number of nonNulls is " + nullNotCount);
 
 		// write a for loop that tells me the last position of null in the array
-		int lastNull = -1;
+		// this is an old style for loop with an array location
+		// by last null postion we mean the position with the highest value
+		int lastNull = -1; // asserting b/c it's not part of the array
 		for (int pos = 0; pos < stringArray.length; pos++) {
 			if (stringArray[pos] == null) {
 				lastNull = pos;
 			}
 
 		}
-		System.out.println("Position of the last null is " + lastNull);
+
+		if (lastNull == -1) {
+			System.out.println("The array does not have a null");
+		} else {
+			System.out.println("Position of the last null is " + lastNull);
+		}
+
+		// same solution with enhance for loop -- a more simple solution
+		int notNullCountEnhanced = 0;
+		for (String value : stringArray) {
+			if (value != null) {
+				notNullCountEnhanced = notNullCountEnhanced + 1;
+			}
+		}
+
+		// more efficient because it can break the loop once it found its answer
+		int lastNullPositionReverse = -1;
+		for (int pos = stringArray.length - 1; pos >= 0; pos--) {
+			if (stringArray[pos] == null) {
+				lastNullPositionReverse = pos;
+				break;
+			}
+		}
 
 		// write a for loop that starts at the final position in the array and counts
 		// down to the first
 
-		for (int pos = 9; pos < stringArray.length; pos--) {
+		for (int pos = stringArray.length - 1; pos >= 0; pos--) {
 			System.out.println("(Reversed)The value in position " + pos + " is " + stringArray[pos]);
 		}
 
@@ -88,21 +112,42 @@ public class ArrayExample {
 	// use letters.split(",") to make an array of letters
 	// loop over the array and count the number of letter that are not vowels
 
-	String myLetters = "a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z";
+	String letters = "a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z";
 
-	String[] myAlphabetArray = myLetters.split(",");
-	String[] stringAlphaArray = new String[25];
-	String vowels = "aeiouAEIOU";
+	String[] lettersArray = letters.split(",");
+	int numberOfLetters = 0;
 
-	int totalNonVowels = -1;
+	// String[] stringAlphaArray = new String[25];
+
 	{
-		for (int i = 0; i <= stringAlphaArray.length; i++) {
-			if (stringAlphaArray[] == String vowels){
-			System.out.print("The number of letter that are not vowels is " + totalNonVowels);
+		for (int pos = 0; pos <= lettersArray.length; pos++) {
 
+			if (lettersArray[pos].equals("a")) {
+				continue;
+			} else if (lettersArray[pos].equals("e")) {
+				continue;
+			} else if (lettersArray[pos].equals("i")) {
+				continue;
+			} else if (lettersArray[pos].equals("o")) {
+				continue;
+			} else if (lettersArray[pos].equals("u")) {
+				continue;
+			}
+
+			numberOfLetters = numberOfLetters + 1;
+		}
+		System.out.println("Number of letter = " + numberOfLetters);
+
+		// used an enhanced loop and much less code
+		String vowels = "aeiou";
+
+		int numberOfLettersEnhanced = 0;
+		for (String letter : lettersArray) {
+			if (!vowels.contains(letter)) {
+				numberOfLettersEnhanced = numberOfLettersEnhanced + 1;
+			}
 		}
 
-		System.out.print("Contents of the alphabet array are " + Arrays.toString(myAlphabetArray));
-
+		System.out.println("Number of letter = " + numberOfLettersEnhanced);
 	}
 }

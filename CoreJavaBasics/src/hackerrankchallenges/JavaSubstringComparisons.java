@@ -9,11 +9,11 @@ public class JavaSubstringComparisons {
 		
 		
 		
-getSmallestAndLargest(String s, int k) {
+//getSmallestAndLargest(String s, int k) {
 	
 }
 	}
 
-}
+
 
 // UGGGGGGGG! I do not get this one!
