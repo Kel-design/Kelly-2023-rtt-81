@@ -81,8 +81,10 @@ public class SubstringDemo {
 
 		String anotherexample = "This is an example";
 		int i = -1;
-		for (i = 0; i > anotherexample.length(); i++) {
-		System.out.println(anotherexample.charAt(0));}
+		for (int pos = 0; pos > anotherexample.length(); pos++) {
+			//note that using an array is slightly different in that it uses [] to reference
+			//the position
+		System.out.println(anotherexample.charAt(pos));}
 		// how to print out more than one and cause it to loop...
 	}
 
