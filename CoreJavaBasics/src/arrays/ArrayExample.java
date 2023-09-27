@@ -142,6 +142,7 @@ public class ArrayExample {
 		String vowels = "aeiou";
 
 		int numberOfLettersEnhanced = 0;
+		//instead of letterArray could shortcut and put letters.split(",")instead of creating another variable
 		for (String letter : lettersArray) {
 			if (!vowels.contains(letter)) {
 				numberOfLettersEnhanced = numberOfLettersEnhanced + 1;
