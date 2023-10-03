@@ -1,6 +1,6 @@
 package glab303111genericmethodandclass;
 
-public class GMultipleDatatype {
+
 	public class GMultipleDatatype <Datatypeone, DatatypeTwo> {
 		Datatypeone valueOne;
 		DatatypeTwo valueTwo;
@@ -26,4 +26,4 @@ public class GMultipleDatatype {
 			this.valueTwo = valueTwo;
 		}
 	}
-}
+
