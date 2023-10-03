@@ -1,17 +1,16 @@
 package loops;
 
-public class SBAPracticeTrial1 {
+public class SBAPracticeTrial2 {
 
 	public static void main(String[] args) {
-		int n = 123;
+		int x = 8763;
 		int sum = 0;
-		while (n > 0) {
-			sum += n % 10;
-			n /= 10;
+		while (x == 0) {
+			x = x / 10;
+			sum += x % 10;
+			
 			System.out.print(sum);
-
 		}
 
 	}
-
 }
