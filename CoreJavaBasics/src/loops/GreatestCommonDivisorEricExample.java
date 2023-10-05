@@ -5,6 +5,7 @@ import java.util.Scanner;
 public class GreatestCommonDivisorEricExample {
 
 	public static void main(String[] args) {
+		
 		Scanner scanner = new Scanner(System.in);
 
 		int n1 = readPositiveNumber(scanner);
@@ -28,28 +29,38 @@ public class GreatestCommonDivisorEricExample {
 		// 5 / 7 = 0.x ,
 
 		int gcd = 1;
-		int min = Math.min(n1, n2); // Java figures out the lower number b/n n1 and n2
+		int min = Math.min(n1, n2); {// Java figures out the lower number b/n n1 and n2
 		for (int k = 1; k <= min; k++) {
 			if ((n1 % k == 0) && (n2 % k == 0)) {
 				gcd = k;
-			}
-		}
+			
+		
 
-		System.out.println("The gcd of " + n1 + " and " + n2 + " is " + gcd);
-	}
+		System.out.println("The gcd of " + n1 + " and " + n2 + " is " + gcd);}}
+	}}
+		
+	
+	// make this catch an exception if the user enters letters
+	// create a new GCDException that extends Exception and is thrown when an user enters a non number
+	//slide 33 create new class that extends Exception and call super constructor
 
 	public static int readPositiveNumber(Scanner scanner) {
+		
 		int number = -1;
 		while (number <= 0) {
-			System.out.println("Enter another positive integer greater than 0:  ");
+			try {
+				System.out.println("Enter another positive integer greater than 0:  ");
+				throw new GCDException("This is my Error Message"
+						+ "You did not enter a number. Please enter a number.");
+			
 			number = scanner.nextInt();
-
+			} catch (Exception e) {
 			if (number <= 0) {
 				System.out.println("Error : Must be a positive number");
 			}
-		}
-		return number;
+		
 
 	}
 
 }
+		return number;}}

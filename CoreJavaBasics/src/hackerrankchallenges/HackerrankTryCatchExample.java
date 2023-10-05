@@ -1,6 +1,6 @@
 package hackerrankchallenges;
 
-public class hackerranktrycatchexceptions {
+public class HackerrankTryCatchExample {
 
 	public static void main(String[] args) {
 		int x = 10;
