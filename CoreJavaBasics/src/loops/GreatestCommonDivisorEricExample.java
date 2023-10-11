@@ -53,7 +53,7 @@ public class GreatestCommonDivisorEricExample {
 				throw new GCDException("This is my Error Message"
 						+ "You did not enter a number. Please enter a number.");
 			
-			number = scanner.nextInt();
+			//number = scanner.nextInt();
 			} catch (Exception e) {
 			if (number <= 0) {
 				System.out.println("Error : Must be a positive number");

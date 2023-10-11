@@ -4,6 +4,7 @@ public class HackerrankTryCatchExample {
 
 	public static void main(String[] args) {
 		int x = 10;
+		int hello = 0;
 		int y = hello;
 		try {
 			if (y > 0) {
